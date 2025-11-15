@@ -20,6 +20,7 @@ export function AuthProvider({ children }) {
         
 
         try {
+            // decoded token has the value which we add while we sign it.
             const decoded = jwtDecode(token);
 
             let currentTime = Date.now() / 1000;

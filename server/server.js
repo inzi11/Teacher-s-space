@@ -5,6 +5,7 @@ import dotenv from "dotenv"
 import connectDB from "./config/connectDB.js"
 import studentRoutes from "./routes/studentRoutes.js"
 import teacherRoutes from "./routes/teacherRoutes.js"
+import noteRoutes from "./routes/notesRoutes.js"
 
 dotenv.config();
 
@@ -29,10 +30,10 @@ app.use(express.json());
 
 connectDB();
 
-// Remember app.use() -> is used as a parent inside which we can load multiple routes. tales two args -> (route name ,  routers)
+// Remember app.use() -> is used as a parent inside which we can load multiple routes. takes two args -> (route name ,  routers)
 app.use("/api/students", studentRoutes);
-app.use("/api/teachers" , teacherRoutes)
-
+app.use("/api/teachers", teacherRoutes);
+app.use("/api/notes", noteRoutes);
 
 
 app.listen(process.env.PORT || 5000, () => {

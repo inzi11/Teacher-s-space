@@ -53,7 +53,7 @@ const { email, password } = req.body;
         jwt.sign(payload(data -> encoded not encrypted don't pass password), SECRET_KEY, EXPIREY_TIME)
         */
     const token = jwt.sign(
-      { id: teacher._id, email: teacher.email, name: teacher.name },
+      { id: teacher._id, email: teacher.email, name: teacher.name, createdAt: teacher.createdAt },
       process.env.JWT_SECRET,
       { expiresIn: "4h" }
     );

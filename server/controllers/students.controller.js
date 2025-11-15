@@ -1,5 +1,6 @@
 import { Student } from "../models/Students.models.js";
 
+// NOTE Students section is all global and is not protected do it after creating the notes
 // create 
 
 export const addStudent = async (req, res) => {

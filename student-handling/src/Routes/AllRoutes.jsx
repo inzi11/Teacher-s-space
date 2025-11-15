@@ -10,6 +10,7 @@ import Students from "../Components/Students/Students";
 import AllStudents from "../Components/Students/AllStudents";
 import AddStudents from "../Components/Students/AddStudents";
 import ViewStudent from "../Components/Students/ViewStudent";
+import DashBoard from "../Components/Dashboard/DashBoard";
 
 function AllRoutes() {
   return (
@@ -18,6 +19,7 @@ function AllRoutes() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<TeacherLogin />} />
         <Route path="/signup" element={<TeacherSignup />} />
+        <Route path="/dashboard" element={<DashBoard />} />
 
         <Route path="/students/*" element={<Students />}>
           <Route index element={<AllStudents />} />

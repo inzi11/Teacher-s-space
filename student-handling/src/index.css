@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+
+:root {
+  --primary: #4338CA;
+  --secondary: #6366F1;
+  --text: #1F2937;
+}
+
+
+@layer utilities {
+  .no-spinner::-webkit-inner-spin-button,
+  .no-spinner::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

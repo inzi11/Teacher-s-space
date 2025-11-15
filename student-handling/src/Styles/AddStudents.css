@@ -1,0 +1,16 @@
+input{
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.inp-lab{
+    display: flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 600;
+    gap: 0px 3srem;
+}

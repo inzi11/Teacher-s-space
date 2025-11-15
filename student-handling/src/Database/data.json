@@ -1,0 +1,242 @@
+{
+  "Info": [
+    {
+      "name": "Charlie",
+      "rollNumber": "103",
+      "subjects": {
+        "math": 100,
+        "physics": 100,
+        "english": 98,
+        "physicalEd": 97,
+        "chemisty": 99
+      },
+      "attendence": 105,
+      "grades": 99.1,
+      "id": "48a3"
+    },
+    {
+      "name": "David",
+      "rollNumber": "104",
+      "subjects": {
+        "math": 20,
+        "physics": 25,
+        "english": 18,
+        "physicalEd": 30,
+        "chemisty": 22
+      },
+      "attendence": 60,
+      "grades": 23,
+      "id": "9484"
+    },
+    {
+      "name": "Eva",
+      "rollNumber": "105",
+      "subjects": {
+        "math": 88,
+        "physics": 84,
+        "english": 90,
+        "physicalEd": 95,
+        "chemisty": 89
+      },
+      "attendence": 93,
+      "grades": 89.2,
+      "id": "ef3b"
+    },
+    {
+      "name": "Grace",
+      "rollNumber": "107",
+      "subjects": {
+        "math": 92,
+        "physics": 95,
+        "english": 89,
+        "physicalEd": 90,
+        "chemisty": 94
+      },
+      "attendence": 98,
+      "grades": 92,
+      "id": "6d21"
+    },
+    {
+      "name": "Hannah",
+      "rollNumber": "108",
+      "subjects": {
+        "math": 65,
+        "physics": 70,
+        "english": 68,
+        "physicalEd": 72,
+        "chemisty": 66
+      },
+      "attendence": 77,
+      "grades": 68.2,
+      "id": "0653"
+    },
+    {
+      "name": "Ian",
+      "rollNumber": "109",
+      "subjects": {
+        "math": 50,
+        "physics": 55,
+        "english": 60,
+        "physicalEd": 62,
+        "chemisty": 58
+      },
+      "attendence": 110,
+      "grades": 57,
+      "id": "fcf3"
+    },
+    {
+      "name": "Jack",
+      "rollNumber": "110",
+      "subjects": {
+        "math": 35,
+        "physics": 40,
+        "english": 38,
+        "physicalEd": 42,
+        "chemisty": 30
+      },
+      "attendence": 50,
+      "grades": 37,
+      "id": "9aa0"
+    },
+    {
+      "name": "Kate",
+      "rollNumber": "111",
+      "subjects": {
+        "math": 95,
+        "physics": 97,
+        "english": 92,
+        "physicalEd": 96,
+        "chemisty": 93
+      },
+      "attendence": 99,
+      "grades": 94.6,
+      "id": "30fb"
+    },
+    {
+      "name": "Leo",
+      "rollNumber": "112",
+      "subjects": {
+        "math": 60,
+        "physics": 62,
+        "english": 58,
+        "physicalEd": 65,
+        "chemisty": 61
+      },
+      "attendence": 70,
+      "grades": 61.2,
+      "id": "85fb"
+    },
+    {
+      "name": "Mia",
+      "rollNumber": "113",
+      "subjects": {
+        "math": 88,
+        "physics": 90,
+        "english": 85,
+        "physicalEd": 89,
+        "chemisty": 87
+      },
+      "attendence": 92,
+      "grades": 87.8,
+      "id": "1c78"
+    },
+    {
+      "name": "Nathan",
+      "rollNumber": "114",
+      "subjects": {
+        "math": 73,
+        "physics": 75,
+        "english": 70,
+        "physicalEd": 78,
+        "chemisty": 72
+      },
+      "attendence": 84,
+      "grades": 73.6,
+      "id": "f44d"
+    },
+    {
+      "name": "Olivia",
+      "rollNumber": "115",
+      "subjects": {
+        "math": 91,
+        "physics": 93,
+        "english": 88,
+        "physicalEd": 94,
+        "chemisty": 90
+      },
+      "attendence": 96,
+      "grades": 91.2,
+      "id": "4696"
+    },
+    {
+      "name": "Paul",
+      "rollNumber": "116",
+      "subjects": {
+        "math": 55,
+        "physics": 60,
+        "english": 50,
+        "physicalEd": 58,
+        "chemisty": 52
+      },
+      "attendence": 78,
+      "grades": 55,
+      "id": "2d9c"
+    },
+    {
+      "name": "Quinn",
+      "rollNumber": "117",
+      "subjects": {
+        "math": 40,
+        "physics": 42,
+        "english": 38,
+        "physicalEd": 45,
+        "chemisty": 35
+      },
+      "attendence": 65,
+      "grades": 40,
+      "id": "6a97"
+    },
+    {
+      "name": "Rachel",
+      "rollNumber": "118",
+      "subjects": {
+        "math": 82,
+        "physics": 85,
+        "english": 80,
+        "physicalEd": 88,
+        "chemisty": 84
+      },
+      "attendence": 100,
+      "grades": 83.8,
+      "id": "86af"
+    },
+    {
+      "name": "Steve",
+      "rollNumber": "119",
+      "subjects": {
+        "math": 95,
+        "physics": 98,
+        "english": 93,
+        "physicalEd": 97,
+        "chemisty": 96
+      },
+      "attendence": 105,
+      "grades": 95.8,
+      "id": "18c7"
+    },
+    {
+      "name": "Tina",
+      "rollNumber": "120",
+      "subjects": {
+        "math": 30,
+        "physics": 28,
+        "english": 25,
+        "physicalEd": 35,
+        "chemisty": 32
+      },
+      "attendence": 55,
+      "grades": 30,
+      "id": "952b"
+    }
+  ]
+}

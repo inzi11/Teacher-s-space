@@ -39,6 +39,7 @@ export function AuthProvider({ children }) {
 
     // Login
     function login(token) {
+        // login successful store the token created by backend to localstorage
         localStorage.setItem("token", token); 
 
         const decode = jwtDecode(token); 

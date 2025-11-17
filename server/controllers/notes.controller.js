@@ -1,4 +1,4 @@
-import { Notes } from "../models/Notes.models";
+import { Notes } from "../models/Notes.models.js";
 
 export const saveNotes = async (req, res) => {
   try {
@@ -55,7 +55,8 @@ export const updateNotes = async (req, res) => {
         teacher: req.user.id
       }
     ,
-      req.body,
+      req.body
+    ,
       { new: true }
     )
 

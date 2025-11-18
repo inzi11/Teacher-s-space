@@ -1,24 +1,53 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
-function AINoteGenerator({setGeneratedContent}) {
-  
+function AINoteGenerator({ setGeneratedContent }) {
   const [preview, setPreview] = useState("");
-  const [isLoading, setIsLoading] = useState(false); 
+  const [isLoading, setIsLoading] = useState(false);
   const [prompt, setPrompt] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+  const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
 
-  function generateNote() {
+  async function generateNote() {
     // empty prompt
-    if (!prompt.trim()) return; 
+    if (!prompt.trim()) return;
 
     setIsLoading(true);
+    setErrorMsg("");
+    setPreview("");
 
+    try {
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
-    // Temporary simulation for now
-    setTimeout(() => {
-      const fakeAIText = `Generated notes for: ${prompt}`;
-      setPreview(fakeAIText);
-      setIsLoading(false);
-    }, 3000);
+      const result = await model.generateContent(
+        `Generate simple, clean educational notes about: ${prompt}
+
+        IMPORTANT RULES:
+        - DO NOT use Markdown formatting.
+        - DO NOT use asterisks (*), hashtags (#), dashes (---), or any special characters.
+        - DO NOT use bold, italic, or headings syntax.
+        - Write everything in plain text only.
+        - No lists using "-"
+        - Use normal numbered lists only if needed (1. 2. 3.)
+        - Keep spacing clean with one blank line between paragraphs.
+        - Make the notes teacher-friendly and easy to read.
+        - Start with a simple explanation, then key points, then examples.
+        - Keep the tone educational and clear.
+
+        The output must be plain text and ready to use directly in a note editor.`
+      );
+
+      console.log(result);
+
+      const output = result.response.text();
+
+      setPreview(output);
+    } catch (error) {
+      console.log("Error generatoing AI notes: ", error);
+      setErrorMsg("Failed to generate notes");
+    }
+
+    setIsLoading(false);
   }
 
   function useThisNote() {
@@ -26,10 +55,12 @@ function AINoteGenerator({setGeneratedContent}) {
   }
 
   return (
+    <>
+
+
+
     <div className="bg-white shadow p-6 rounded-xl">
-      <h2 className="text-xl font-semibold mb-4">
-        AI Notes Generator 
-      </h2>
+      <h2 className="text-xl font-semibold mb-4">AI Notes Generator</h2>
 
       <input
         className="w-full border p-3 rounded-lg"
@@ -45,6 +76,8 @@ function AINoteGenerator({setGeneratedContent}) {
         {isLoading ? "Generating..." : "Generate"}
       </button>
 
+      {errorMsg && <p className="text-red-500 mt-3">{errorMsg}</p>}
+
       {preview && (
         <div className="mt-4 bg-gray-100 p-4 rounded-lg">
           <p className="whitespace-pre-wrap">{preview}</p>
@@ -57,7 +90,8 @@ function AINoteGenerator({setGeneratedContent}) {
           </button>
         </div>
       )}
-    </div>
+      </div>   
+      </>
   );
 }
 

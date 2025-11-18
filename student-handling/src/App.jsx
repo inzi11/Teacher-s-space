@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
 import AllRoutes from './Routes/AllRoutes'
-import NotesPage from './Components/Notes/NotesPage'
+import AddNote from './Components/Notes/AddNote'
 
 function App() {
   return (
     <>
       <Navbar />
+      <AddNote />
       <AllRoutes />
       
     </>

@@ -115,7 +115,8 @@ function AddNote() {
               name="content"
               className="w-full border rounded-lg px-3 p-3 h-32  outline-none"
               placeholder="Content from AI or your own..."
-              value={generatedContent}
+                value={generatedContent}
+                disabled
               onChange={(e) => setGeneratedContent(e.target.value)}
             />
           </div>
